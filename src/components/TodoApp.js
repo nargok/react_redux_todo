@@ -1,9 +1,13 @@
 import React from 'react';
 
-const TodoApp = ({ tasks, inputTask, addTask }) => {
+const TodoApp = ({ task, tasks, inputTask, addTask, resetTask, clickItem }) => {
   const items = tasks.map((task, index) => {
-    return <li key={index}>{task.title}</li>
-  })
+    if (task.done === false) {
+      return <li key={index} onClick={() => clickItem(index)}>{task.title}</li>
+    } else {
+      return <s key={index} onClick={() => clickItem(index)}><li>{task.title}</li></s>
+    }    
+  });
   return (
     <React.Fragment>
       <div>
@@ -12,7 +16,7 @@ const TodoApp = ({ tasks, inputTask, addTask }) => {
       </div>
       <ul>{items}</ul>
     </React.Fragment>
-  )
-}
+  );
+};
 
 export default TodoApp;
