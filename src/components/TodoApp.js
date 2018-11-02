@@ -13,6 +13,7 @@ const TodoApp = ({ task, tasks, inputTask, addTask, resetTask, clickItem }) => {
       <div>
         <input type="text" onChange={(e) => inputTask(e.target.value)} />
         <button onClick={() => addTask()}>Add</button>
+        <button onClick={() => resetTask()}>Reset</button>
       </div>
       <ul>{items}</ul>
     </React.Fragment>

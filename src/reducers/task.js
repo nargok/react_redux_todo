@@ -18,7 +18,7 @@ const tasksReducer = (state = initialState, action) => {
         ...state,
         tasks: state.tasks.concat([
           { title: state.task, done: false}
-        ]).reverse() // 降順にする
+        ])
       }
 
     case 'RESET_TASK':
@@ -32,10 +32,8 @@ const tasksReducer = (state = initialState, action) => {
         tasks: state.tasks.map((task, index) => {
           if (index === action.payload.index) {
             task.done = !task.done
-            return task
-          } else {
-            return task
           }
+          return task;
         })
       }
     default:
