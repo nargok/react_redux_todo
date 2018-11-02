@@ -1,3 +1,4 @@
+// action
 const inputTask = (task) => ({
   type: 'INPUT_TASK',
   payload: {
@@ -9,4 +10,15 @@ const addTask = () => ({
   type: 'ADD_TASK'
 });
 
-export { inputTask, addTask };
+const resetTask = () => ({
+  type: 'RESET_TASK'
+});
+
+const clickItem = (index) => ({
+  type: 'CLICK_ITEM',
+  payload: {
+    index
+  }
+});
+
+export { inputTask, addTask, resetTask, clickItem };
