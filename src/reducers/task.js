@@ -15,21 +15,6 @@ const tasksReducer = (state = initialState, action) => {
         ...state,
         tasks: state.tasks.concat([ { title: state.task, done: false }])
       }
-    case 'RESET_TASK':
-      return {
-        ...state,
-        tasks: []
-      }
-    case 'CLICK_ITEM':
-      return {
-        ...state,
-        tasks: state.tasks.map((task, index) => {
-          if (index === action.payload.index) {
-            task.done = !task.done
-          }
-          return task;
-        })
-      }
     default:
       return state;
   }

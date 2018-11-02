@@ -5,19 +5,8 @@ const inputTask = (task) => ({
   }
 });
 
-const addTask = () =>  ({
+const addTask = () => ({
   type: 'ADD_TASK'
 });
 
-const resetTask = () => ({
-  type: 'RESET_TASK'
-});
-
-const clickItem = (index) => ({
-  type: 'CLICK_ITEM',
-  payload: {
-    index
-  }
-}); 
-
-export { inputTask, addTask, resetTask, clickItem };
+export { inputTask, addTask };
