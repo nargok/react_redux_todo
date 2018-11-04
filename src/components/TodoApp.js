@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TodoApp = ({ task, tasks, inputTask, addTask, resetTask, clickItem }) => {
+const TodoApp = ({ tasks, inputTask, addTask, resetTask, clickItem }) => {
   const items = tasks.map((task, index) => {
     if (task.done === false) {
       return <li key={index} onClick={() => clickItem(index)}>{task.title}</li>
@@ -17,7 +17,7 @@ const TodoApp = ({ task, tasks, inputTask, addTask, resetTask, clickItem }) => {
       </div>
       <ul>{items}</ul>
     </React.Fragment>
-  );
+  )
 };
 
-export default TodoApp;
+export default TodoApp

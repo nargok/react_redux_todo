@@ -1,11 +1,8 @@
-
-// 初期値
 const initialState = {
   task: '',
   tasks: []
 };
 
-// reduecer
 const tasksReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'INPUT_TASK':
@@ -16,11 +13,8 @@ const tasksReducer = (state = initialState, action) => {
     case 'ADD_TASK':
       return {
         ...state,
-        tasks: state.tasks.concat([
-          { title: state.task, done: false}
-        ])
+        tasks: state.tasks.concat([ { title: state.task, done: false }])
       }
-
     case 'RESET_TASK':
       return {
         ...state,

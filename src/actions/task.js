@@ -1,4 +1,3 @@
-// action
 const inputTask = (task) => ({
   type: 'INPUT_TASK',
   payload: {
