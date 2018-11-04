@@ -4,7 +4,7 @@ const initialState = {
 };
 
 const tasksReducer = (state = initialState, action) => {
-  switch (action.type) {
+  switch(action.type) {
     case 'INPUT_TASK':
       return {
         ...state,
@@ -15,7 +15,7 @@ const tasksReducer = (state = initialState, action) => {
         ...state,
         tasks: state.tasks.concat([ { title: state.task, done: false }])
       }
-    case 'RESET_TASK':
+    case 'CLEAR_TASK':
       return {
         ...state,
         tasks: []
@@ -33,6 +33,6 @@ const tasksReducer = (state = initialState, action) => {
     default:
       return state;
   }
-}
+};
 
 export default tasksReducer;

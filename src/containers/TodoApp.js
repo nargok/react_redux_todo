@@ -1,4 +1,4 @@
-import { inputTask, addTask, resetTask, clickItem } from '../actions/task';
+import { inputTask, addTask, clearTask, clickItem } from '../actions/task';
 import { connect } from 'react-redux';
 import TodoApp from '../components/TodoApp';
 
@@ -11,18 +11,18 @@ const mapStateToProps = ({ task, tasks }) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    inputTask(task) {
+    input(task) {
       dispatch(inputTask(task))
     },
-    addTask() {
+    add() {
       dispatch(addTask())
     },
-    resetTask() {
-      dispatch(resetTask())
+    clear() {
+      dispatch(clearTask())
     },
-    clickItem(index){
+    click(index) {
       dispatch(clickItem(index))
-    },
+    }
   }
 };
 

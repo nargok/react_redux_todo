@@ -7,11 +7,11 @@ const inputTask = (task) => ({
 
 const addTask = () => ({
   type: 'ADD_TASK'
-});
+})
 
-const resetTask = () => ({
-  type: 'RESET_TASK'
-});
+const clearTask = () => ({
+  type: 'CLEAR_TASK'
+})
 
 const clickItem = (index) => ({
   type: 'CLICK_ITEM',
@@ -20,4 +20,4 @@ const clickItem = (index) => ({
   }
 });
 
-export { inputTask, addTask, resetTask, clickItem };
+export { inputTask, addTask, clearTask, clickItem };
