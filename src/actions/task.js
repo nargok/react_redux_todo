@@ -7,17 +7,17 @@ const inputTask = (task) => ({
 
 const addTask = () => ({
   type: 'ADD_TASK'
-})
+});
 
-const clearTask = () => ({
-  type: 'CLEAR_TASK'
-})
+const resetTask = () => ({
+  type: 'RESET_TASK'
+});
 
 const clickItem = (index) => ({
   type: 'CLICK_ITEM',
   payload: {
     index
   }
-});
+})
 
-export { inputTask, addTask, clearTask, clickItem };
+export { inputTask, addTask, resetTask, clickItem };
