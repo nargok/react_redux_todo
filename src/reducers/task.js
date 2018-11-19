@@ -1,6 +1,8 @@
 const initialState = {
   task: '',
-  tasks: []
+  tasks: [
+    { title: 'デフォルトタスク', done: false }
+  ]
 };
 
 const tasksReducer = (state = initialState, action) => {
@@ -9,7 +11,7 @@ const tasksReducer = (state = initialState, action) => {
       return {
         ...state,
         task: action.payload.task
-      }
+      };
     case 'ADD_TASK':
       return {
         ...state,

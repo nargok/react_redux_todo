@@ -1,6 +1,6 @@
 const inputTask = task => ({
   type: 'INPUT_TASK',
-  payload :{
+  payload: {
     task
   }
 });
@@ -9,7 +9,7 @@ const addTask = () => ({
   type: 'ADD_TASK'
 });
 
-const resetTask  = () => ({
+const resetTask = () => ({
   type: 'RESET_TASK'
 });
 

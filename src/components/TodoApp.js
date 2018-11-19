@@ -3,7 +3,7 @@ import React from 'react';
 const TodoApp = ({ tasks, inputTask, addTask, resetTask }) => {
   const items = tasks.map((task, index) => {
     return <li key={index}>{task.title}</li>
-  })
+  });
   return (
     <React.Fragment>
       <div>
