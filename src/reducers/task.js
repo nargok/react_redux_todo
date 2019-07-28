@@ -15,6 +15,14 @@ const tasksReducer = (state = initState, action) => {
         ...state,
         tasks: state.tasks.concat([{title: state.task, done: false}])
       };
+    case 'UPDATE_TODO':
+      return {
+        ...state,
+        tasks: state.tasks.map(task =>
+         task.id === action.payload.index
+          ? { ...task, done: !task.done }
+          : task
+        )};
     default:
       return state;
 

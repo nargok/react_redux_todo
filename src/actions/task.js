@@ -9,9 +9,17 @@ const addTask = () => ({
   type: 'ADD_TASK'
 });
 
+const updateTodo = (index) => ({
+  type: 'UPDATE_TODO',
+  payload: {
+    index
+  }
+});
+
 export {
   inputTask,
-  addTask
+  addTask,
+  updateTodo,
 };
 
 
