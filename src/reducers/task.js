@@ -1,11 +1,9 @@
-const initialState = {
+const initState = {
   task: '',
-  tasks: [
-    { title: 'デフォルトタスク', done: false }
-  ]
+  tasks: []
 };
 
-const tasksReducer = (state = initialState, action) => {
+const tasksReducer = (state = initState, action) => {
   switch (action.type) {
     case 'INPUT_TASK':
       return {
@@ -15,15 +13,11 @@ const tasksReducer = (state = initialState, action) => {
     case 'ADD_TASK':
       return {
         ...state,
-        tasks: state.tasks.concat([ { title: state.task, done: false }])
-      }
-    case 'RESET_TASK':
-      return {
-        ...state,
-        tasks: []
-      }
+        tasks: state.tasks.concat([{title: state.task, done: false}])
+      };
     default:
       return state;
+
   }
 };
 

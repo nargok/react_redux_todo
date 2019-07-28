@@ -9,8 +9,9 @@ const addTask = () => ({
   type: 'ADD_TASK'
 });
 
-const resetTask = () => ({
-  type: 'RESET_TASK'
-});
+export {
+  inputTask,
+  addTask
+};
 
-export { inputTask, addTask, resetTask };
+
